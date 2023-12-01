@@ -1,16 +1,16 @@
 function calcAverageCalories(days) {
-  //Ця функція спочатку перевіряє, чи масив days порожній. Якщо так, то повертається значення 0.//
+  //This function first checks if the days array is empty. If so, 0 is returned.//
 
   if (days.length === 0) {
     return 0;
   }
 
-  //Обчислюється загальна кількість калорій, після чого рахується середнє значення калорій за допомогою формули totalCalories / кількість днів.//
+  //The total number of calories is calculated, after which the average value of calories is calculated using the formula totalCalories / number of days.//
 
   let totalCalories = 0;
 
-  for (let i = 0; i < days.length; i++) {
-    totalCalories += days[i].calories;
+  for (let day of days) {
+    totalCalories += day.calories;
   }
 
   return totalCalories / days.length;
